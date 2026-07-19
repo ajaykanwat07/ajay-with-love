@@ -1,1 +1,43 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ajay With Love</title><link rel="stylesheet" href="style.css"></head><body><header><h1>Ajay With Love</h1></header><section class="hero"><img src="ajay.jpg"><h2>Hello, I'm Ajay Kanwat</h2><p>Welcome to my personal portfolio website.</p></section><script src="script.js"></script></body></html>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><m// Welcome Message
+window.onload = function () {
+    setTimeout(function () {
+        alert("❤️ Welcome to Ajay With Love ❤️\n\nThanks for visiting my personal website.");
+    }, 500);
+};
+
+// Back To Top Button
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+
+};
+
+topBtn.onclick = function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+};
+
+// Smooth Hover Animation
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-10px) scale(1.03)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0px) scale(1)";
+    });
+
+});
