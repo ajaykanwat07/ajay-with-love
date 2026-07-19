@@ -1,0 +1,43 @@
+// Welcome Message
+window.onload = function () {
+    setTimeout(function () {
+        alert("❤️ Welcome to Ajay With Love ❤️\n\nThanks for visiting my personal website.");
+    }, 500);
+};
+
+// Back To Top Button
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+
+};
+
+topBtn.onclick = function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+};
+
+// Smooth Hover Animation
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-10px) scale(1.03)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0px) scale(1)";
+    });
+
+});
