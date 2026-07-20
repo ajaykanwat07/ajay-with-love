@@ -1,91 +1,278 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+/* ==========================
+   AJAY WITH LOVE - STYLE.CSS
+========================== */
 
-html{
-    scroll-behavior:smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#050816;
-    color:white;
+background:#050816;
+color:#fff;
 }
 
-/* Navigation */
+/* Loader */
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#050816;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999;
+}
+
+.spinner{
+width:70px;
+height:70px;
+border:6px solid #222;
+border-top:6px solid #00bfff;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+#loader h2{
+margin-top:20px;
+color:#00bfff;
+}
+
+/* Header */
 
 header{
-    width:100%;
-    position:fixed;
-    top:0;
-    left:0;
-    background:#0b1120;
-    box-shadow:0 0 15px rgba(0,140,255,.3);
-    z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+background:#08111f;
+padding:18px 8%;
+z-index:1000;
+box-shadow:0 0 15px rgba(0,191,255,.25);
 }
 
 nav{
-    width:90%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 nav h2{
-    color:#00bfff;
-    letter-spacing:2px;
+color:#00bfff;
+font-size:28px;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
+display:flex;
+list-style:none;
 }
 
 nav ul li{
-    margin-left:25px;
+margin-left:25px;
 }
 
 nav ul li a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
+color:white;
+text-decoration:none;
+transition:.3s;
+font-size:17px;
 }
 
 nav ul li a:hover{
-    color:#00bfff;
+color:#00bfff;
 }
 
 /* Hero */
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:100px 20px 50px;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 40px;
 }
 
 .profile{
-    width:220px;
-    height:220px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid #00bfff;
-    box-shadow:0 0 35px #00bfff;
-    margin-bottom:25px;
+width:230px;
+height:230px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #00bfff;
+box-shadow:0 0 30px #00bfff;
+margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:48px;
-    color:#00bfff;
+font-size:52px;
+color:#00bfff;
+margin-bottom:10px;
 }
 
 .hero h3{
-    margin-top:15px;
-    color:#d1
+font-weight:400;
+margin-bottom:30px;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+padding:13px 35px;
+background:#00bfff;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#009acd;
+transform:scale(1.05);
+}
+
+/* Sections */
+
+section{
+width:90%;
+max-width:1000px;
+margin:auto;
+padding:80px 0;
+}
+
+section h2{
+text-align:center;
+color:#00bfff;
+font-size:36px;
+margin-bottom:25px;
+}
+
+section p{
+text-align:center;
+line-height:1.9;
+color:#ddd;
+font-size:18px;
+}
+
+/* Skills */
+
+.skill{
+margin-top:25px;
+font-weight:600;
+}
+
+.bar{
+height:12px;
+background:#1e293b;
+border-radius:20px;
+margin-top:8px;
+overflow:hidden;
+}
+
+.bar span{
+display:block;
+height:100%;
+background:#00bfff;
+border-radius:20px;
+}
+
+/* Contact */
+
+#contact p{
+margin:15px;
+font-size:18px;
+}
+
+/* WhatsApp Button */
+
+.whatsapp{
+position:fixed;
+left:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 15px #25D366;
+z-index:999;
+}
+
+/* Top Button */
+
+#topBtn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#00bfff;
+color:white;
+font-size:22px;
+cursor:pointer;
+display:none;
+}
+
+/* Footer */
+
+footer{
+background:#08111f;
+padding:30px;
+text-align:center;
+margin-top:50px;
+color:#aaa;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav ul li{
+margin:8px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero h3{
+font-size:18px;
+}
+
+.profile{
+width:170px;
+height:170px;
+}
+
+section h2{
+font-size:28px;
+}
+
+}
