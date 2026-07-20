@@ -1,43 +1,71 @@
+// =======================
+// Ajay With Love - Version 2
+// =======================
+
 // Welcome Message
-window.onload = function () {
+window.addEventListener("load", function () {
     setTimeout(function () {
-        alert("❤️ Welcome to Ajay With Love ❤️\n\nThanks for visiting my personal website.");
-    }, 500);
-};
+        alert("❤️ Welcome to Ajay With Love ❤️\n\nThanks for visiting my portfolio!");
+    }, 600);
+});
 
-// Back To Top Button
-const topBtn = document.getElementById("topBtn");
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
 
-window.onscroll = function () {
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
 
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
+// Fade Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0px)";
+        }
+    });
+});
+
+document.querySelectorAll("section").forEach(section => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "0.8s";
+    observer.observe(section);
+});
+
+// Navbar Shadow
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector("header");
+
+    if(window.scrollY > 20){
+        header.style.boxShadow="0 5px 20px rgba(0,191,255,.5)";
+    }else{
+        header.style.boxShadow="none";
     }
 
-};
+});
 
-topBtn.onclick = function () {
+// Profile Glow Effect
+const profile=document.querySelector(".profile");
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+profile.addEventListener("mouseenter",()=>{
 
-};
-
-// Smooth Hover Animation
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(card => {
-
-    card.addEventListener("mouseenter", () => {
-        card.style.transform = "translateY(-10px) scale(1.03)";
-    });
-
-    card.addEventListener("mouseleave", () => {
-        card.style.transform = "translateY(0px) scale(1)";
-    });
+profile.style.boxShadow="0 0 60px #00bfff";
 
 });
+
+profile.addEventListener("mouseleave",()=>{
+
+profile.style.boxShadow="0 0 35px #00bfff";
+
+});
+
+// Footer Year
+const footer=document.querySelector("footer");
+
+footer.innerHTML="© "+new Date().getFullYear()+" Ajay Kanwat | Made with ❤️";
