@@ -508,3 +508,18 @@ section h2{
     font-size:45px;
     cursor:pointer;
 }
+section{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.8s;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+nav a.active{
+    color:#00bfff;
+    border-bottom:2px solid #00bfff;
+}
