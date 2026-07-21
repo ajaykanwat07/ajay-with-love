@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,10 +9,13 @@
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -22,8 +24,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
 <!-- Loader -->
 
 <div id="loader">
-    <div class="spinner"></div>
-    <h2>Ajay With Love ❤️</h2>
+
+<div class="spinner"></div>
+
+<h2>Ajay With Love ❤️</h2>
+
 </div>
 
 <!-- Header -->
@@ -31,51 +36,57 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
 <header>
 
 <div class="logo">
-❤️ AJAY WITH LOVE
+AJAY <span>WITH LOVE</span>
 </div>
 
 <nav>
 
 <ul>
+
 <li><a href="#home">Home</a></li>
+
 <li><a href="#about">About</a></li>
+
 <li><a href="#skills">Skills</a></li>
+
 <li><a href="#projects">Projects</a></li>
+
 <li><a href="#gallery">Gallery</a></li>
+
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
 
 </header>
 
-<!-- Hero Section -->
+<!-- Hero -->
 
 <section id="home" class="hero">
 
-<img src="ajay.jpg" alt="Ajay" class="profile">
+<img src="ajay.jpg" class="profile" alt="Ajay">
 
 <h1>Ajay Kanwat</h1>
 
-<h3 id="typing">
-Technology Lover • Web Learner • AI Creator
-</h3>
+<h3 id="typing"></h3>
 
 <p>
-Welcome to <b>Ajay With Love</b> ❤️<br>
-A personal portfolio where I share my work, creativity and passion for technology.
+
+Welcome to my personal portfolio website.
+
+I love creating, learning and exploring new technology.
+
 </p>
 
-<div class="hero-buttons">
+<div class="buttons">
 
 <a href="#about" class="btn">
 About Me
 </a>
 
-<a href="https://wa.me/917737515057"
-class="btn2"
-target="_blank">
-WhatsApp
+<a href="#contact" class="btn-outline">
+Contact Me
 </a>
 
 </div>
@@ -88,15 +99,15 @@ WhatsApp
 
 <h2>About Me</h2>
 
-<div class="card">
+<div class="glass">
 
 <p>
 
-Hello! I'm <b>Ajay Kanwat</b> from Rajasthan, India.
+Hello! I'm <strong>Ajay Kanwat</strong> from Rajasthan, India.
 
-I enjoy learning new technologies, creating websites, exploring AI tools, and continuously improving my skills.
+I enjoy creating websites, learning new technology, exploring AI tools, and building creative digital projects.
 
-This website is my personal portfolio where I showcase my work and projects.
+This website showcases my work, skills, and journey.
 
 </p>
 
@@ -108,40 +119,61 @@ This website is my personal portfolio where I showcase my work and projects.
 
 <section id="skills">
 
-<h2>My Skills</h2>
+<h2>Skills</h2>
 
-<div class="skill-box">
+<div class="skill">
 
-<h4>HTML</h4>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
+<span>HTML</span>
 
-<h4>CSS</h4>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-
-<h4>JavaScript</h4>
-<div class="bar"><div class="fill" style="width:75%"></div></div>
-
-<h4>GitHub</h4>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-
-<h4>AI Tools</h4>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
+<div class="progress">
+<div class="progress-bar" style="width:90%;"></div>
+</div>
 
 </div>
 
-</section>
-<!-- Projects -->
+<div class="skill">
+
+<span>CSS</span>
+
+<div class="progress">
+<div class="progress-bar" style="width:85%;"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<span>JavaScript</span>
+
+<div class="progress">
+<div class="progress-bar" style="width:75%;"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<span>GitHub</span>
+
+<div class="progress">
+<div class="progress-bar" style="width:80%;"></div>
+</div>
+
+</div>
+<!-- ==========================
+     PROJECTS
+========================== -->
 
 <section id="projects">
 
 <h2>My Projects</h2>
 
-<div class="project-container">
+<div class="projects-container">
 
 <div class="project-card">
-<i class="fas fa-globe"></i>
+<i class="fas fa-laptop-code"></i>
 <h3>Personal Portfolio</h3>
-<p>A modern responsive portfolio website built using HTML, CSS & JavaScript.</p>
+<p>A modern responsive portfolio website built using HTML, CSS and JavaScript.</p>
 </div>
 
 <div class="project-card">
@@ -151,96 +183,42 @@ This website is my personal portfolio where I showcase my work and projects.
 </div>
 
 <div class="project-card">
-<i class="fas fa-code"></i>
-<h3>Web Design</h3>
-<p>Beautiful and responsive website designs with modern UI.</p>
+<i class="fas fa-globe"></i>
+<h3>GitHub Pages</h3>
+<p>Hosting responsive websites using GitHub Pages.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- Gallery -->
+<!-- ==========================
+     GALLERY
+========================== -->
 
 <section id="gallery">
 
 <h2>Gallery</h2>
 
-<div class="gallery">
+<div class="gallery-grid">
 
 <img src="ajay.jpg" alt="Ajay">
-
 <img src="ajay.jpg" alt="Ajay">
-
 <img src="ajay.jpg" alt="Ajay">
 
 </div>
 
 </section>
 
-<!-- Contact -->
+<!-- ==========================
+     CONTACT
+========================== -->
 
 <section id="contact">
 
 <h2>Contact Me</h2>
 
-<div class="contact-box">
-
-<p><i class="fas fa-phone"></i> 7737515057</p>
-
-<p><i class="fas fa-envelope"></i> ajaykanwat07@gmail.com</p>
-
-<p><i class="fab fa-github"></i> github.com/ajaykanwat07</p>
-
-<p><i class="fas fa-location-dot"></i> Rajasthan, India</p>
-
-<a href="https://wa.me/917737515057" class="btn" target="_blank">
-<i class="fab fa-whatsapp"></i> Chat on WhatsApp
-</a>
-
-</div>
-
-</section>
-
-<!-- Footer -->
-
-<footer>
-
-<h3>❤️ Ajay With Love</h3>
-
-<p>Made with ❤️ by Ajay Kanwat</p>
-
-<p>© 2026 All Rights Reserved</p>
-
-</footer>
-
-<!-- Floating WhatsApp -->
-
-<a href="https://wa.me/917737515057"
-class="whatsapp"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-<!-- Scroll Top -->
-
-<button id="topBtn">
-<i class="fas fa-arrow-up"></i>
-</button>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-<!-- Contact Section -->
-
-<section id="contact">
-
-<h2>Contact Me</h2>
-
-<div class="contact-box">
+<div class="contact-container">
 
 <div class="contact-card">
 <i class="fas fa-phone"></i>
@@ -260,9 +238,15 @@ target="_blank">
 <p>ajaykanwat07</p>
 </div>
 
+<div class="contact-card">
+<i class="fas fa-location-dot"></i>
+<h3>Location</h3>
+<p>Rajasthan, India</p>
 </div>
 
-<div class="social-links">
+</div>
+
+<div class="social-icons">
 
 <a href="https://github.com/ajaykanwat07" target="_blank">
 <i class="fab fa-github"></i>
@@ -280,15 +264,21 @@ target="_blank">
 
 </section>
 
-<!-- Footer -->
+<!-- ==========================
+     FOOTER
+========================== -->
 
 <footer>
 
 <h2>Ajay With Love ❤️</h2>
 
-<p>Made with ❤️ by Ajay Kanwat</p>
+<p>
+Made with ❤️ by Ajay Kanwat
+</p>
 
-<p>© 2026 All Rights Reserved</p>
+<p>
+© 2026 All Rights Reserved
+</p>
 
 </footer>
 
@@ -302,7 +292,7 @@ target="_blank">
 
 </a>
 
-<!-- Scroll To Top -->
+<!-- Scroll Top -->
 
 <button id="topBtn">
 <i class="fas fa-arrow-up"></i>
