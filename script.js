@@ -1,162 +1,145 @@
-/* ===================================
-   AJAY WITH LOVE - VERSION 4
-=================================== */
+// ===============================
+// AJAY WITH LOVE - SCRIPT.JS
+// ===============================
 
 // Loader
-window.addEventListener("load", () => {
-
+window.onload = function () {
     const loader = document.getElementById("loader");
 
-    setTimeout(() => {
-
-        if(loader){
+    if (loader) {
+        setTimeout(() => {
             loader.style.opacity = "0";
             loader.style.visibility = "hidden";
-        }
+        }, 1000);
+    }
+};
 
-    },1000);
-
-});
-
-// Typing Animation
-
-const typing=document.getElementById("typing");
-
-const text="Technology Lover • Web Developer • AI Creator ❤️";
-
-let i=0;
-
-function typeWriter(){
-
-if(typing && i<text.length){
-
-typing.innerHTML+=text.charAt(i);
-
-i++;
-
-setTimeout(typeWriter,70);
-
-}
-
-}
-
-typeWriter();
-
+// Welcome
+setTimeout(() => {
+    console.log("❤️ Welcome to Ajay With Love ❤️");
+}, 1200);
 
 // Scroll To Top
+const topBtn = document.getElementById("topBtn");
 
-const topBtn=document.getElementById("topBtn");
+window.addEventListener("scroll", function () {
 
-window.onscroll=function(){
-
-if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
-
-topBtn.style.display="flex";
-
-}else{
-
-topBtn.style.display="none";
-
-}
-
-}
-
-topBtn.onclick=function(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
+    if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
 
 });
 
-}
+topBtn.onclick = function () {
 
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
-// Smooth Scroll
+};
+// ===============================
+// Smooth Section Animation
+// ===============================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+const sections = document.querySelectorAll("section");
 
-anchor.addEventListener("click",function(e){
+const observer = new IntersectionObserver((entries) => {
 
-e.preventDefault();
+    entries.forEach((entry) => {
 
-document.querySelector(this.getAttribute("href")).scrollIntoView({
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
 
-behavior:"smooth"
+    });
 
+}, {
+    threshold: 0.15
 });
 
-});
-
-});
-
-
-// Fade Animation
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-});
-
-document.querySelectorAll("section").forEach(sec=>{
-
-observer.observe(sec);
-
+sections.forEach((section) => {
+    observer.observe(section);
 });
 
 
-// Navbar Active
+// ===============================
+// Active Navigation
+// ===============================
 
-const navLinks=document.querySelectorAll("nav a");
+const navLinks = document.querySelectorAll("nav a");
 
-navLinks.forEach(link=>{
+window.addEventListener("scroll", () => {
 
-link.addEventListener("click",()=>{
+    let current = "";
 
-navLinks.forEach(item=>item.classList.remove("active"));
+    sections.forEach((section) => {
 
-link.classList.add("active");
+        const sectionTop = section.offsetTop - 120;
 
-});
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach((link) => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
 
 });
 
 
-// Profile Glow Animation
+// ===============================
+// Gallery Zoom (No Errors)
+// ===============================
 
-const profile=document.querySelector(".profile");
+const galleryImages = document.querySelectorAll(".gallery-grid img");
 
-if(profile){
+galleryImages.forEach((img) => {
 
-setInterval(()=>{
+    img.style.cursor = "pointer";
 
-profile.style.boxShadow="0 0 60px #00bfff";
+    img.addEventListener("click", () => {
 
-setTimeout(()=>{
+        if (!document.getElementById("preview")) {
 
-profile.style.boxShadow="0 0 30px #00bfff";
+            const preview = document.createElement("div");
+            preview.id = "preview";
 
-},800);
+            preview.style.position = "fixed";
+            preview.style.top = "0";
+            preview.style.left = "0";
+            preview.style.width = "100%";
+            preview.style.height = "100%";
+            preview.style.background = "rgba(0,0,0,0.9)";
+            preview.style.display = "flex";
+            preview.style.justifyContent = "center";
+            preview.style.alignItems = "center";
+            preview.style.zIndex = "99999";
 
-},2500);
+            const image = document.createElement("img");
+            image.src = img.src;
+            image.style.maxWidth = "90%";
+            image.style.maxHeight = "90%";
+            image.style.borderRadius = "15px";
 
-}
+            preview.appendChild(image);
 
+            preview.onclick = () => preview.remove();
 
-// Welcome Message
+            document.body.appendChild(preview);
 
-setTimeout(()=>{
+        }
 
-console.log("Welcome to Ajay With Love ❤️");
-   }, 1000);
+    });
+
+});
