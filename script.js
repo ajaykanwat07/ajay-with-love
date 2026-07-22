@@ -1,9 +1,10 @@
 // ===============================
-// AJAY WITH LOVE - FINAL SCRIPT
+// AJAY WITH LOVE V6
 // ===============================
 
 // Loader
 window.addEventListener("load", () => {
+
     const loader = document.getElementById("loader");
 
     if (loader) {
@@ -11,14 +12,15 @@ window.addEventListener("load", () => {
             loader.style.display = "none";
         }, 800);
     }
+
 });
 
 // Scroll To Top
 const topBtn = document.getElementById("topBtn");
 
-if (topBtn) {
+window.addEventListener("scroll", () => {
 
-    window.addEventListener("scroll", () => {
+    if (topBtn) {
 
         if (window.scrollY > 300) {
             topBtn.style.display = "block";
@@ -26,7 +28,11 @@ if (topBtn) {
             topBtn.style.display = "none";
         }
 
-    });
+    }
+
+});
+
+if (topBtn) {
 
     topBtn.addEventListener("click", () => {
 
@@ -39,19 +45,19 @@ if (topBtn) {
 
 }
 
-// Smooth Scroll
+// Smooth Navigation
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    link.addEventListener("click", function(e) {
+    link.addEventListener("click", function (e) {
 
         const target = document.querySelector(this.getAttribute("href"));
 
-        if(target){
+        if (target) {
 
             e.preventDefault();
 
             target.scrollIntoView({
-                behavior:"smooth"
+                behavior: "smooth"
             });
 
         }
@@ -60,88 +66,43 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 });
 
-// Section Animation
+// Active Navigation
 const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
 
-const observer = new IntersectionObserver((entries)=>{
+window.addEventListener("scroll", () => {
 
-    entries.forEach(entry=>{
+    let current = "";
 
-        if(entry.isIntersecting){
+    sections.forEach(section => {
 
-            entry.target.classList.add("show");
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
 
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            current = section.getAttribute("id");
         }
 
     });
 
-},{threshold:0.15});
+    navLinks.forEach(link => {
 
-sections.forEach(section=>observer.observe(section));
+        link.classList.remove("active");
 
-// Gallery Preview
-document.querySelectorAll(".gallery-card img").forEach(img=>{
-
-    img.addEventListener("click",()=>{
-
-        const overlay=document.createElement("div");
-
-        overlay.style.position="fixed";
-        overlay.style.top="0";
-        overlay.style.left="0";
-        overlay.style.width="100%";
-        overlay.style.height="100%";
-        overlay.style.background="rgba(0,0,0,.9)";
-        overlay.style.display="flex";
-        overlay.style.justifyContent="center";
-        overlay.style.alignItems="center";
-        overlay.style.zIndex="99999";
-
-        const image=document.createElement("img");
-
-        image.src=img.src;
-        image.style.maxWidth="90%";
-        image.style.maxHeight="90%";
-        image.style.borderRadius="15px";
-        image.style.border="3px solid #00bfff";
-
-        overlay.appendChild(image);
-
-        overlay.addEventListener("click",()=>{
-
-            overlay.remove();
-
-        });
-
-        document.body.appendChild(overlay);
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
 
     });
 
 });
 
-// Active Navigation
-const navLinks=document.querySelectorAll("nav a");
+// Fade Animation
+const observer = new IntersectionObserver(entries => {
 
-window.addEventListener("scroll",()=>{
+    entries.forEach(entry => {
 
-    let current="";
-
-    sections.forEach(section=>{
-
-        const top=section.offsetTop-120;
-
-        if(window.pageYOffset>=top){
-
-            current=section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href")==="#"+current){
-
-            link.classList.add("
+        if (entry.isIntersecting)
