@@ -74,14 +74,12 @@ const typingText = document.getElementById("typing");
 
 
 const words = [
-
-"Living,
-"Learning,
-"Growing,
-"Thoughts,
-"Shayari,
-"Life,
-
+    "Living",
+    "Learning",
+    "Growing",
+    "Thoughts",
+    "Shayari",
+    "Life"
 ];
 
 
