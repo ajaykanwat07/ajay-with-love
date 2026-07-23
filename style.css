@@ -1117,3 +1117,13 @@ footer {
     color:var(--gray);
     margin-top:5px;
 }
+#typing::after{
+    content:"|";
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
