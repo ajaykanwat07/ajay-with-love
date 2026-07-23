@@ -1227,3 +1227,17 @@ header,
 .btn{
     transition:all .35s ease;
 }
+/* ===========================
+   SCROLL REVEAL
+=========================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
