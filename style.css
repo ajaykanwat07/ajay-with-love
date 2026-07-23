@@ -1178,3 +1178,52 @@ footer {
     }
 
 }
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode{
+    background:#f5f7fb;
+    color:#111;
+}
+
+body.light-mode header{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(15px);
+}
+
+body.light-mode .glass,
+body.light-mode .stat,
+body.light-mode .profile-card{
+    background:rgba(255,255,255,.75);
+    color:#111;
+    border:1px solid rgba(0,0,0,.08);
+}
+
+body.light-mode p,
+body.light-mode a,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4{
+    color:#111;
+}
+
+body.light-mode .btn{
+    background:#111;
+    color:#fff;
+}
+
+body.light-mode .btn:hover{
+    background:#00f5ff;
+    color:#111;
+}
+
+body,
+header,
+.glass,
+.stat,
+.profile-card,
+.btn{
+    transition:all .35s ease;
+}
