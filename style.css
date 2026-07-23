@@ -1084,3 +1084,25 @@ footer {
 
 
 }
+.hero-stats{
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.stat{
+    padding:18px 25px;
+    text-align:center;
+    min-width:120px;
+}
+
+.stat h3{
+    color:var(--accent);
+    font-size:28px;
+}
+
+.stat p{
+    color:var(--gray);
+    margin-top:5px;
+}
