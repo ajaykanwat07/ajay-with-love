@@ -75,10 +75,12 @@ const typingText = document.getElementById("typing");
 
 const words = [
 
-    "Web Creator",
-    "Creative Designer",
-    "Tech Explorer",
-    "Future Developer"
+"Living"
+"Learning"
+"Growing"
+"Thoughts"
+"Shayari"
+"Life"
 
 ];
 
