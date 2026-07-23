@@ -384,16 +384,18 @@ section {
 
 }
 
+.profile-card img{
 
-.profile-card img {
+    width:300px;
+    height:300px;
+    object-fit:cover;
 
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 50%;
+    border-radius:50%;
+    border:5px solid #111;
+    position:relative;
+    z-index:2;
 
 }
-
 
 /* ===============================
    ABOUT SECTION
