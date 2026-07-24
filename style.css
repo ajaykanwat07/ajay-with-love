@@ -1598,3 +1598,8 @@ header,
 #loadMoreBtn:hover{
     transform:translateY(-3px);
 }
+/* Hidden Reels */
+
+.hidden-reel{
+    display:none;
+}
