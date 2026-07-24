@@ -1476,10 +1476,9 @@ header,
 }
 
 .featured-reel img{
-    width:200px;
-    max-width:100%;
+    width:180px;
+    height:240px;
     border-radius:15px;
-    aspect-ratio:9/16;
     object-fit:cover;
     display:block;
 }
