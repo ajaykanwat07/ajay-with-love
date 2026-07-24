@@ -386,3 +386,21 @@ if (themeToggle) {
     });
 
 }
+/*================ LOAD MORE REELS ================*/
+
+const loadMoreBtn = document.getElementById("loadMoreBtn");
+const hiddenReels = document.querySelectorAll(".hidden-reel");
+
+if(loadMoreBtn){
+
+    loadMoreBtn.addEventListener("click", () => {
+
+        hiddenReels.forEach(reel => {
+            reel.style.display = "block";
+        });
+
+        loadMoreBtn.style.display = "none";
+
+    });
+
+}
