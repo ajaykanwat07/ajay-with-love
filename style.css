@@ -1580,3 +1580,21 @@ header,
     }
 
 }
+/* Load More Button */
+
+.load-more-container{
+    text-align:center;
+    margin-top:40px;
+}
+
+#loadMoreBtn{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#loadMoreBtn:hover{
+    transform:translateY(-3px);
+}
