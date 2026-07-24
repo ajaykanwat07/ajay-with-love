@@ -1557,3 +1557,26 @@ header,
 .reel-link:hover .reel-footer{
     color:#ff4f87;
 }
+/* Mobile Responsive */
+
+@media (max-width:768px){
+
+    .featured-reel{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .featured-reel img{
+        width:180px;
+        height:250px;
+    }
+
+    .featured-content h3{
+        font-size:24px;
+    }
+
+    .reels-container{
+        grid-template-columns:1fr;
+    }
+
+}
