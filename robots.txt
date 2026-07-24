@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ajaykanwat07.github.io/ajay-with-love/sitemap.xml
