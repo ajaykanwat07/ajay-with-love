@@ -1425,3 +1425,41 @@ header,
     transform:translate(-50%,-50%) scale(1.15);
     background:#E1306C;
 }
+/* Reel Link */
+.reel-link{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.reel-link:hover{
+    color: inherit;
+}
+
+/* Play Button */
+.play-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(225, 48, 108, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 28px;
+    transition: .3s;
+}
+
+.reel-card{
+    position: relative;
+    overflow: hidden;
+}
+
+.reel-card:hover .play-btn{
+    transform: translate(-50%, -50%) scale(1.15);
+    background: #E1306C;
+}
