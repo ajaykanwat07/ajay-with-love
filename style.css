@@ -1463,3 +1463,68 @@ header,
     transform: translate(-50%, -50%) scale(1.15);
     background: #E1306C;
 }
+/* Featured Reel */
+
+.featured-reel{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    padding:25px;
+    margin-bottom:40px;
+    border-radius:20px;
+    flex-wrap:wrap;
+}
+
+.featured-reel img{
+    width:320px;
+    max-width:100%;
+    border-radius:15px;
+    aspect-ratio:9/16;
+    object-fit:cover;
+}
+
+.featured-content{
+    flex:1;
+}
+
+.featured-badge{
+    display:inline-block;
+    background:#E1306C;
+    color:#fff;
+    padding:8px 15px;
+    border-radius:30px;
+    margin-bottom:15px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.featured-content h3{
+    margin-bottom:10px;
+    font-size:30px;
+}
+
+.featured-content p{
+    margin-bottom:20px;
+    color:#bbb;
+}
+/* Reel Overlay */
+
+.reel-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.35);
+    opacity:0;
+    transition:.3s;
+}
+
+.reel-card:hover::before{
+    opacity:1;
+}
+
+.reel-card:hover .play-btn{
+    transform:translate(-50%,-50%) scale(1.2);
+}
