@@ -1536,3 +1536,24 @@ header,
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,.25);
 }
+/* Reel Footer */
+
+.reel-footer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    padding:15px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#E1306C;
+    font-weight:600;
+    transition:.3s;
+}
+
+.reel-footer i{
+    font-size:18px;
+}
+
+.reel-link:hover .reel-footer{
+    color:#ff4f87;
+}
