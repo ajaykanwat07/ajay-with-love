@@ -1642,4 +1642,10 @@ header,
 
 .youtube-profile .btn:hover{
     background:#cc0000;
+    transform:scale(1.05);
+}
+.youtube-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
 }
