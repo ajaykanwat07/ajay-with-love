@@ -1603,3 +1603,43 @@ header,
 .hidden-reel{
     display:none;
 }
+/*================ YouTube ================*/
+
+.youtube-container{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.youtube-profile{
+    max-width:450px;
+    width:100%;
+    text-align:center;
+    padding:40px 30px;
+    border-radius:20px;
+}
+
+.youtube-icon{
+    font-size:70px;
+    color:#FF0000;
+    margin-bottom:20px;
+}
+
+.youtube-profile h3{
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.youtube-profile p{
+    color:#bbb;
+    margin-bottom:25px;
+    line-height:1.7;
+}
+
+.youtube-profile .btn{
+    background:#FF0000;
+}
+
+.youtube-profile .btn:hover{
+    background:#cc0000;
+}
